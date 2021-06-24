@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+    --yellow:#603F83FF;
+}
+
+
+@import
+url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width
+{
+    width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar css */
+.navbar
+{
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+    padding: 15px 0;
+    letter-spacing: 2px;
+}
+
+.navbar.sticky
+{
+    padding: 15px 0;
+    background-color: rgb(211, 151, 41);;
+}
+
+.navbar .max-width
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo
+{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a
+{
+    text-decoration: none;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar .menu a:hover
+{
+    border: 1px solid white;
+    color: tomato;
+    transition: 1s;
+}
+
+.menu-btn
+{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section css */
+.home
+{
+    /* position: absolute; */
+    height: 100vh;
+    letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .slider p.small
+{
+    
+    margin-top: 40vh;
+    text-align:center;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.home .slider p.big
+{   
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.home .slider .slide1, .home .slider .slide2, .home .slider .slide3
+{   
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.home .slider .slide1
+{
+    background-image: url('images/image17.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade1 10s infinite;
+}
+
+.home .slider .slide2
+{
+    background-image: url('images/image13.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade2 10s infinite;
+}
+
+.home .slider .slide3
+{
+    background-image: url('images/image15.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade3 10s infinite;
+}
+
+@keyframes fade1
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    25%
+    {
+        opacity: 0;
+    }
+
+    75%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade2
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 1;
+    }
+
+    75%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fade3
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 0;
+    }
+
+    75%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+/* About Section css */
+
+section.about, section.contact
+{
+    padding: 100px 0;
+    background-color: rgb(32, 26, 26);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.about
+{
+    font-family: Georgia, sans-serif;
+}
+
+.about .max-width
+{
+    width: 100%;
+}
+
+.about .title, .skills .title, .education .title, .contact .title{
+    text-decoration:  4px solid underline cyan;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.about .about-content, .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left
+{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+
+
+.about .about-content .right
+{
+    width: 55%;
+}
+
+.about .about-content .right .text, .contact .contact-content .text{
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: tomato;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+    font-size: 22px;
+}
+
+.about .about-content .right a
+{
+    display: inline-block;
+    color: white;
+    background-color: tomato;
+    font-size: 25px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid tomato;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+
+.about .about-content .right a:hover
+{
+    color: tomato;
+    background: none;
+}
+
+
+/* education section styling */
+
+section.education
+{
+    padding: 100px 0;
+    background-color:rgb(54,51,51);
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 3rem 6rem;
+    
+}
+
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid black;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:tomato;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:rgb(238, 115, 187);
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:rgb(211, 204, 111);
+    padding: 1rem 0;
+    font-family:arial;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(255, 255, 255);
+    background:var(--yellow);
+}
+
+/* Skillst section css */
+
+section.skills{
+    padding: 100px 0;
+    background-color:rgb(32,26,26);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.skills .max-width
+{
+    width: 100%;
+}
+
+.skills .skills-content .left
+{
+    width: 45%;
+}
+
+.skills .skills-content .right
+{
+    width: 45%;
+}
+
+.skills .skill-bar
+{
+    /* width: 500px; */
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 8px 8px 10px grey;/*rgba(13, 98, 194, 0.945)*/
+}
+
+.skills .skill-bar h2
+{
+    text-align: center;
+    color: grey;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+}
+
+.skills .skill-bar .bar
+{
+    margin: 20px 0;
+}
+
+.skills .skill-bar .bar:first-child
+{
+    margin-top: 0px;
+}
+
+.skills .skill-bar .bar .info
+{
+    margin-bottom: 5px;
+    color: black;
+    font-family: 'Verdana', sans-serif;
+}
+
+.skills .skill-bar .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.skills .skill-bar .bar .progress-line
+{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8) ;
+}
+
+.skills .skill-bar .bar .progress-line span
+{
+    height: 100%;
+    width: 80%;
+    background: rgba(105, 13, 141, 0.733);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.skills .skill-bar .bar .progress-line span::before{
+    position:absolute;
+    content:"";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+
+.skills .skill-bar .bar .progress-line span::after{
+    position: absolute;
+    content: "80%";
+    right: 0;
+    top: -28px;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.skills .skill-bar .bar .progress-line.html span{
+    width: 80%;
+}
+
+.skills .skill-bar .bar .progress-line.css span{
+    width: 60%;
+}
+
+.skills .skill-bar .bar .progress-line.javascript span{
+    width: 70%;
+}
+
+.skills .skill-bar .bar .progress-line.php span{
+    width: 65%;
+}
+
+.skills .skill-bar .bar .progress-line.mysql span{
+    width: 55%;
+}
+
+.skills .skill-bar .bar .progress-line.c span{
+    width: 85%;
+}
+
+.skills .skill-bar .bar .progress-line.cpp span{
+    width: 70%;
+}
+
+.skills .skill-bar .bar .progress-line.html span::after
+{
+    content:"80%";
+}
+
+.skills .skill-bar .bar .progress-line.css span::after
+{
+    content:"60%";
+}
+
+.skills .skill-bar .bar .progress-line.javascript span::after
+{
+    content:"70%";
+}
+
+.skills .skill-bar .bar .progress-line.php span::after
+{
+    content:"65%";
+}
+
+.skills .skill-bar .bar .progress-line.mysql span::after
+{
+    content:"55%";
+}
+
+.skills .skill-bar .bar .progress-line.c span::after
+{
+    content:"85%";
+}
+
+.skills .skill-bar .bar .progress-line.cpp span::after
+{
+    content:"70%";
+}
+
+
+
+
+/* Contact Section css */
+
+section.contact
+{
+    padding: 100px 0;
+    background-color: rgb(54, 51, 51);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .max-width
+{
+    width: 100%;
+}
+
+.contact .contact-content .icons{
+    margin: 20px 0; 
+}
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px; 
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .center .text{
+    color: tomato;
+}
+
+.contact .contact-content .row i{
+    margin-top: 10px;
+    font-size: 25px;
+    color: darkgrey
+}
+
+.contact .contact-content .info .head{
+    font-size: 20px;
+    font-family: 'Verdana';
+    font-weight: 500;
+    color:rgb(219, 156, 84);
+}
+
+.contact .contact-content .info .subtitle{
+    font-size: 20px;
+    font-family: 'Verdana';
+    font-weight: 500;
+}
+
+.contact .contact-content .social i
+{
+    font-size: 40px;
+    margin: 20px 30px;
+}
+
+.contact .contact-content .social i.insta{
+    color: rgb(219, 49, 163);
+}
+
+.contact .contact-content .social i.linkedin{
+    color: blue;
+}
+
+/* Footer css */
+footer{
+    text-align: center;
+    background:rgb(32, 26, 26);
+    padding: 20px 23px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    letter-spacing: 2px;
+}
+
+footer p{
+    margin-bottom: 8px;
+}
+
+footer span{
+    color: tomato
+}
+
+ /* responsive media query start */
+ @media (max-width: 1133px) {
+    .education .box-container{
+       justify-content: center;
+    }
+}
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 15px 0;
+        font-size: 20px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
